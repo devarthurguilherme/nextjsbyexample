@@ -1,7 +1,12 @@
+import Heading from "@/components/Heading"
+
 export default function StardewValleyPage() {
     return (
         <>
-            <h2>Stardew Valley</h2>
+            <Heading>Stardew Valley</Heading>
+            <img src="/images/stardew-valley.jpg" alt=""
+                width="640" height="360" className="mb-2 rounded"
+            />
             <p>This will be the review for Stardew Valley.</p>
         </>
     )
