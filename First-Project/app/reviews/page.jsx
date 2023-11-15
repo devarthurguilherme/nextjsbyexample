@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+//Components
 import Heading from "@/components/Heading";
 
 const Links = [
@@ -15,7 +15,7 @@ const Links = [
         description: "Stardew Valley", 
         image: "/images/stardew-valley.jpg"
     }
-]
+];
 
 export default function ReviewsPage() {
     return (
@@ -37,7 +37,7 @@ export default function ReviewsPage() {
                                     className="mb-2 rounded-t"
                                     
                                 />
-                                <h2 className="py-1 text-center">
+                                <h2 className=" font-semibold font-orbitron py-1 text-center">
                                     {item.description}
                                 </h2>
                             </Link>

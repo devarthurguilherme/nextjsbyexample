@@ -1,6 +1,8 @@
-import Heading from "@/components/Heading"
+import { readFile } from "node:fs/promises";
+import Heading from "@/components/Heading";
 
-export default function hollowKnight() {
+export default async function hollowKnight() {
+    const text = await readFile("./content/reviews/hollow-knight.md", "4:19")
     return (
         <>
             <Heading>Hollow Knight</Heading>
