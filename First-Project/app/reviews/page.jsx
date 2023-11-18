@@ -1,6 +1,7 @@
 import Link from "next/link";
 //Components
 import Heading from "@/components/Heading";
+import { getReviews } from "@/lib/reviews"
 
 const Links = [
     {
@@ -14,10 +15,19 @@ const Links = [
         path: "/reviews/stardew-valley", 
         description: "Stardew Valley", 
         image: "/images/stardew-valley.jpg"
+    },
+    {
+        id: 3, 
+        path: "/reviews/hellblade", 
+        description: "HellBlade", 
+        image: "/images/hellblade.jpg"
     }
 ];
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+    
+    const reviews = await getReviews();
+
     return (
         <>
             <Heading>Reviews</Heading>
