@@ -3,8 +3,6 @@ import Heading from "@/components/Heading";
 import { getFeaturedReview} from "@/lib/reviews";
 
 export default async function HomePage() {
-    //TODO load featured review
-
     const review = await getFeaturedReview();
     return (
         <>
@@ -13,8 +11,7 @@ export default async function HomePage() {
                 Only the best indie games, reviewed for you.
             </p>
             <div
-                className="bg-white border rounded shadow w-80 sm:w-full hover:shadow-xl" 
-                
+                className="bg-white border rounded shadow w-80 sm:w-full hover:shadow-xl"      
             >                
                 <Link 
                     href={`/reviews/${review.slug}`}
@@ -26,13 +23,11 @@ export default async function HomePage() {
                         width="320"
                         height="180"
                         className="rounded-t sm:rounded-l sm:rounded-r-none"
-                        
                     />
                     <h2 className=" font-semibold font-orbitron py-1 text-center sm:px-2">
                         {review.title}
                     </h2>
                 </Link>
-                
             </div>
         </>
     )

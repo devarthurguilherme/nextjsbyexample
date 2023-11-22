@@ -3,10 +3,12 @@ import Link from "next/link";
 import Heading from "@/components/Heading";
 import { getReviews } from "@/lib/reviews";
 
-export default async function ReviewsPage() {
-    
-    const reviews = await getReviews();
+export const metadata = {
+    title: "Review"
+};
 
+export default async function ReviewsPage() {
+    const reviews = await getReviews();
     return (
         <>
             <Heading>Reviews</Heading>
@@ -24,7 +26,6 @@ export default async function ReviewsPage() {
                                     width="320"
                                     height="180"
                                     className="mb-2 rounded-t"
-                                    
                                 />
                                 <h2 className=" font-semibold font-orbitron py-1 text-center">
                                     {review.title}
